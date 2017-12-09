@@ -1,0 +1,48 @@
+.currency_header {
+  display: flex;
+  align-items: center;
+  font-family: $headline-font;
+  text-transform: uppercase;
+  padding: 0 3px;
+  margin: 5px auto;
+  padding-left: 5px;
+  .currency_header__heading {
+    width: 15%;
+    margin: 5px 0;
+    overflow-wrap: break-word;
+  }
+  .percent_change {
+    width: 45%;
+    padding: 0;
+  }
+  .currency_header__change-container {
+    display: flex;
+    padding: 0;
+    .change-heading {    
+      margin: 0;
+      width: 22%;
+    }
+  }
+}
+.currency {
+  display: flex;
+  height: 25px;
+  border: 3px solid grey;
+  border-radius: 6px;
+  padding: 3px;
+  margin: 5px auto;
+  padding-left: 5px;
+  line-height: 25px;
+
+}
+.currency__name {
+  font-family: $headline-font;
+  text-transform: uppercase;
+  width: 15%;
+}
+.currency__value {
+  width: 15%;
+}
+.currency__trend {
+  width: 10%;
+}
