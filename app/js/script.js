@@ -15,8 +15,7 @@ cryptoData
           displayData(data);
         })
         .then(() => {
-          const trends = document.getElementsByClassName('currency__trend');
-          console.log(trends);
+          const trends = Array.from(document.getElementsByClassName('currency__trend'));
           addPosOrNegClass(trends);
         })
     } else {
@@ -31,10 +30,12 @@ function displayData(data) {
     ticker.innerHTML += `
       <div class="currency">
         <div class="currency__name">${ele.name}</div>
-        <div class="currency__value">£${parseFloat(ele.price_gbp).toFixed(2)}</div>
-        <div class="currency__trend">${ele.percent_change_1h}%</div>  
-        <div class="currency__trend">${ele.percent_change_24h}%</div>  
-        <div class="currency__trend">${ele.percent_change_7d}%</div> 
+        <div class="currency__value">Value: <span£${parseFloat(ele.price_gbp).toFixed(2)}</div>
+        <div class="trend-container">
+          <div class="currency__trend">1h ${ele.percent_change_1h}%</div>  
+          <div class="currency__trend">24h ${ele.percent_change_24h}%</div>  
+          <div class="currency__trend">7d ${ele.percent_change_7d}%</div> 
+        </div>
       </div>
     `
   })
@@ -43,9 +44,9 @@ function displayData(data) {
 // Add relevant class name to element depending on positive or negative
 function addPosOrNegClass(arr) {
   arr.map(ele => {
-    if(parseInt(ele.innerHTML) >= 0) {
+    if(parseFloat(ele.innerHTML) > 0) {
       ele.className += " positive_change";
-    } else if (parseInt(ele.innerHTML) < 0) {
+    } else if (parseFloat(ele.innerHTML) < 0) {
       ele.className += " negative_change";      
     }
   })

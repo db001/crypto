@@ -9,7 +9,6 @@
   .currency_header__heading {
     width: 15%;
     margin: 5px 0;
-    overflow-wrap: break-word;
   }
   .percent_change {
     width: 45%;
@@ -26,23 +25,23 @@
 }
 .currency {
   display: flex;
-  height: 25px;
+  flex-direction: column;
   border: 3px solid grey;
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
   line-height: 25px;
-
+  text-align: center;
 }
 .currency__name {
   font-family: $headline-font;
   text-transform: uppercase;
-  width: 15%;
 }
-.currency__value {
-  width: 15%;
+.trend-container {
+  display: flex;
+  margin: auto;
 }
-.currency__trend {
-  width: 10%;
+.currency__value, .currency__trend {
+  margin: 0 5px;
 }

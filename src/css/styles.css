@@ -13,8 +13,7 @@ body {
   padding-left: 5px; }
   .currency_header .currency_header__heading {
     width: 15%;
-    margin: 5px 0;
-    overflow-wrap: break-word; }
+    margin: 5px 0; }
   .currency_header .percent_change {
     width: 45%;
     padding: 0; }
@@ -27,24 +26,25 @@ body {
 
 .currency {
   display: flex;
-  height: 25px;
+  flex-direction: column;
   border: 3px solid grey;
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
-  line-height: 25px; }
+  line-height: 25px;
+  text-align: center; }
 
 .currency__name {
   font-family: "Righteous", cursive;
-  text-transform: uppercase;
-  width: 15%; }
+  text-transform: uppercase; }
 
-.currency__value {
-  width: 15%; }
+.trend-container {
+  display: flex;
+  margin: auto; }
 
-.currency__trend {
-  width: 10%; }
+.currency__value, .currency__trend {
+  margin: 0 5px; }
 
 .positive_change {
   color: green; }
