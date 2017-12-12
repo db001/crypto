@@ -15,7 +15,7 @@ cryptoData
           displayData(data);
         })
         .then(() => {
-          const trends = Array.from(document.getElementsByClassName('currency__trend'));
+          const trends = Array.from(document.getElementsByClassName('currency__trend--change'));
           addPosOrNegClass(trends);
         })
     } else {
@@ -30,11 +30,11 @@ function displayData(data) {
     ticker.innerHTML += `
       <div class="currency">
         <div class="currency__name">${ele.name}</div>
-        <div class="currency__value">Value: <span£${parseFloat(ele.price_gbp).toFixed(2)}</div>
+        <div class="currency__value">Value: £${parseFloat(ele.price_gbp).toFixed(2)}</div>
         <div class="trend-container">
-          <div class="currency__trend">1h ${ele.percent_change_1h}%</div>  
-          <div class="currency__trend">24h ${ele.percent_change_24h}%</div>  
-          <div class="currency__trend">7d ${ele.percent_change_7d}%</div> 
+          <div class="currency__trend">1h <span class="currency__trend--change">${ele.percent_change_1h}%</span></div>  
+          <div class="currency__trend">24h <span class="currency__trend--change">${ele.percent_change_24h}%</span></div>  
+          <div class="currency__trend">7d <span class="currency__trend--change">${ele.percent_change_7d}%</span></div> 
         </div>
       </div>
     `

@@ -26,13 +26,19 @@
 .currency {
   display: flex;
   flex-direction: column;
-  border: 3px solid grey;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: $mid-light;
+  border-left-color: $mid-light;
+  border-right-color: $dark;
+  border-bottom-color: $dark;
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
   line-height: 25px;
   text-align: center;
+  background-color: $mid-dark;
 }
 .currency__name {
   font-family: $headline-font;
