@@ -2,8 +2,8 @@
 body {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  color: #22333b;
-  background-color: #8da1b9; }
+  color: #eae0d5;
+  background-color: #22333b; }
 
 .currency_header {
   display: flex;
@@ -31,21 +31,22 @@ body {
   flex-direction: column;
   border-width: 3px;
   border-style: solid;
-  border-top-color: #accbe1;
-  border-left-color: #accbe1;
-  border-right-color: #22333b;
-  border-bottom-color: #22333b;
+  border-top-color: #8da1b9;
+  border-left-color: #8da1b9;
+  border-right-color: #0a0908;
+  border-bottom-color: #0a0908;
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
   line-height: 25px;
   text-align: center;
-  background-color: #8da1b9; }
+  background-color: #22333b; }
 
 .currency__name {
   font-family: "Righteous", cursive;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #0a0908; }
 
 .trend-container {
   display: flex;
@@ -54,16 +55,39 @@ body {
 .currency__value, .currency__trend {
   margin: 0 5px; }
 
+@media (min-width: 900px) {
+  .currency {
+    flex-direction: row;
+    text-align: left; }
+
+  .currency__name {
+    width: 20%; }
+
+  .currency__value {
+    width: 20%; }
+
+  .trend-container {
+    width: 50%; }
+
+  .currency__trend {
+    width: 33%; } }
+.sortBy {
+  display: flex;
+  flex-direction: row; }
+
+.sortBy__item {
+  margin-left: 10px; }
+
 .positive_change {
   color: #00d600;
-  text-shadow: 2px 2px 2px #22333b; }
+  text-shadow: 2px 2px 2px #0a0908; }
 
 .positive_change::after {
   content: "\25b2"; }
 
 .negative_change {
   color: red;
-  text-shadow: 2px 2px 2px #22333b; }
+  text-shadow: 2px 2px 2px #0a0908; }
 
 .negative_change::after {
   content: "\25bc"; }

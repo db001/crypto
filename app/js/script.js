@@ -4,15 +4,19 @@ const url = 'https://api.coinmarketcap.com/v1/ticker/?convert=GBP&limit=30';
 
 const ticker = document.getElementsByClassName('ticker')[0];
 
-// To avoid exceeding API calls during dev
 const cryptoData = fetch(url);
+
+// Global variable to hold data
+let data = {};
 
 cryptoData
   .then(response => {
     if(response.ok) {
       response.json()
-        .then(data => {
-          displayData(data);
+        .then(json => {
+          data = json;
+          console.log(data);
+          displayData(json);
         })
         .then(() => {
           const trends = Array.from(document.getElementsByClassName('currency__trend--change'));
@@ -51,3 +55,7 @@ function addPosOrNegClass(arr) {
     }
   })
 }
+
+// function sortBySevenDayChange(input) {
+
+// }

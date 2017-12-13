@@ -26,3 +26,10 @@
         @content;
     }
 }
+
+@mixin embossed-look($light-color, $dark-color) {
+    border-top-color: $light-color;
+    border-left-color: $light-color;
+    border-right-color: $dark-color;
+    border-bottom-color: $dark-color;
+}

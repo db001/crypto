@@ -28,21 +28,20 @@
   flex-direction: column;
   border-width: 3px;
   border-style: solid;
-  border-top-color: $mid-light;
-  border-left-color: $mid-light;
-  border-right-color: $dark;
-  border-bottom-color: $dark;
+  @include embossed-look($mid-dark, $darkest);
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
   line-height: 25px;
   text-align: center;
-  background-color: $mid-dark;
+  background-color: $dark;
 }
 .currency__name {
   font-family: $headline-font;
   text-transform: uppercase;
+  text-shadow: 2px 2px 2px $darkest;
+  
 }
 .trend-container {
   display: flex;
@@ -50,4 +49,24 @@
 }
 .currency__value, .currency__trend {
   margin: 0 5px;
+}
+
+@include for-tablet-landscape-up {
+
+  .currency {
+    flex-direction: row;
+    text-align: left;
+  }
+  .currency__name {
+    width: 20%;
+  }
+  .currency__value {
+    width: 20%;
+  }
+  .trend-container {
+    width: 50%;
+  }
+  .currency__trend {
+    width: 33%;
+  }
 }

@@ -1,13 +1,13 @@
 .positive_change {
   color: rgb(0, 214, 0);
-  text-shadow: 2px 2px 2px $dark;
+  text-shadow: 2px 2px 2px $darkest;
 }
 .positive_change::after {
   content: "\25b2";
 }
 .negative_change {
   color: red;
-  text-shadow: 2px 2px 2px $dark;
+  text-shadow: 2px 2px 2px $darkest;
 }
 .negative_change::after {
   content: "\25bc";
