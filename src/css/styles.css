@@ -2,7 +2,7 @@
 body {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  color: #eae0d5;
+  color: #eaeaea;
   background-color: #22333b; }
 
 .currency_header {
@@ -29,7 +29,7 @@ body {
 .currency {
   display: flex;
   flex-direction: column;
-  border-width: 3px;
+  border-width: 1px;
   border-style: solid;
   border-top-color: #8da1b9;
   border-left-color: #8da1b9;

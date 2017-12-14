@@ -26,7 +26,7 @@
 .currency {
   display: flex;
   flex-direction: column;
-  border-width: 3px;
+  border-width: 1px;
   border-style: solid;
   @include embossed-look($mid-dark, $darkest);
   border-radius: 6px;

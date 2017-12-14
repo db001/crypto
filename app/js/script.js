@@ -7,7 +7,7 @@ const ticker = document.getElementsByClassName('ticker')[0];
 const cryptoData = fetch(url);
 
 // Global variable to hold data
-let data = {};
+let data;
 
 cryptoData
   .then(response => {
@@ -15,8 +15,8 @@ cryptoData
       response.json()
         .then(json => {
           data = json;
-          console.log(data);
           displayData(json);
+          sortData(data, 'price_gbp', true);
         })
         .then(() => {
           const trends = Array.from(document.getElementsByClassName('currency__trend--change'));
@@ -56,6 +56,8 @@ function addPosOrNegClass(arr) {
   })
 }
 
-// function sortBySevenDayChange(input) {
+function sortData(data, sortField, ascending) {
+  data.sort((a, b) => b.sortField - a.sortField);
+  data.map(ele => console.log(ele.price_gbp));
+}
 
-// }
