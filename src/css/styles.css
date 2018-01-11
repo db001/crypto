@@ -76,7 +76,18 @@ body {
   flex-direction: row; }
 
 .sortBy__item {
-  margin-left: 10px; }
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid #8da1b9;
+  padding: 0 3px;
+  border-radius: 3px;
+  display: flex;
+  text-align: center;
+  align-items: center; }
+
+.sortBy__item:hover {
+  background: #accbe1;
+  color: #22333b; }
 
 .positive_change {
   color: #00d600;

@@ -4,4 +4,15 @@
 }
 .sortBy__item {
     margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid $mid-dark;
+    padding: 0 3px;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.sortBy__item:hover {
+    background: $mid-light;
+    color: $dark;
 }
