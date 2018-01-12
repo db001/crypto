@@ -2,8 +2,8 @@
 body {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  color: #eaeaea;
-  background-color: #22333b; }
+  color: #dadada;
+  background-color: #22282b; }
 
 .currency_header {
   display: flex;
@@ -35,13 +35,14 @@ body {
   border-left-color: #8da1b9;
   border-right-color: #0a0908;
   border-bottom-color: #0a0908;
+  box-shadow: 1px 1px 1px #0a0908;
   border-radius: 6px;
   padding: 3px;
   margin: 5px auto;
   padding-left: 5px;
   line-height: 25px;
   text-align: center;
-  background-color: #22333b; }
+  background-color: #22282b; }
 
 .currency__name {
   font-family: "Righteous", cursive;
@@ -83,11 +84,21 @@ body {
   border-radius: 3px;
   display: flex;
   text-align: center;
-  align-items: center; }
+  align-items: center;
+  border-top-color: #accbe1;
+  border-left-color: #accbe1;
+  border-right-color: #0a0908;
+  border-bottom-color: #0a0908;
+  box-shadow: 1px 1px 1px #0a0908; }
 
 .sortBy__item:hover {
   background: #accbe1;
-  color: #22333b; }
+  color: #22282b;
+  border-top-color: #0a0908;
+  border-left-color: #0a0908;
+  border-right-color: #dadada;
+  border-bottom-color: #dadada;
+  box-shadow: inset 1px 1px 1px #0a0908; }
 
 .positive_change {
   color: #00d600;
